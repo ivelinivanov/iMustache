@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  OverlayViewController.h
 //  iMustache
 //
 //  Created by Ivelin Ivanov on 9/3/13.
@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface OverlayViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *image;
 @end
