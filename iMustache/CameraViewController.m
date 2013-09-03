@@ -41,18 +41,39 @@
 
 - (IBAction)sharePicture:(id)sender
 {
-    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)])
-        UIGraphicsBeginImageContextWithOptions(self.imageView.bounds.size, NO, [UIScreen mainScreen].scale);
+    if (self.imageView.image != nil)
+    {
+        if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)])
+            UIGraphicsBeginImageContextWithOptions(self.imageView.bounds.size, NO, [UIScreen mainScreen].scale);
+        else
+            UIGraphicsBeginImageContext(self.imageView.bounds.size);
+        
+        [self.imageView.layer renderInContext:UIGraphicsGetCurrentContext()];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        CGImageRef imageRef = CGImageCreateWithImageInRect([image CGImage], CGRectMake(0, 150, 640, 840));
+    
+        UIImage *newImage = [UIImage imageWithCGImage:imageRef];
+        
+         CGImageRelease(imageRef);
+        
+        NSArray *activityItems = @[newImage];
+        UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+        [self presentViewController:activityController animated:YES completion:nil];
+    }
     else
-        UIGraphicsBeginImageContext(self.imageView.bounds.size);
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Stop"
+                                                        message:@"Take a picture first."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
+        
+        [alert show];
+    }
     
-    [self.imageView.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
     
-    NSArray *activityItems = @[image];
-    UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
-    [self presentViewController:activityController animated:YES completion:nil];
     
 }
 

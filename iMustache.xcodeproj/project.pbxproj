@@ -24,6 +24,8 @@
 		554D776F17D5F4AE000EAB68 /* OverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554D776D17D5F4AE000EAB68 /* OverlayViewController.m */; };
 		554D777017D5F4AE000EAB68 /* OverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 554D776E17D5F4AE000EAB68 /* OverlayViewController.xib */; };
 		554D777217D5F4CA000EAB68 /* mustache.png in Resources */ = {isa = PBXBuildFile; fileRef = 554D777117D5F4CA000EAB68 /* mustache.png */; };
+		554D777517D61D5E000EAB68 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 554D777317D61D5E000EAB68 /* Icon.png */; };
+		554D777617D61D5E000EAB68 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 554D777417D61D5E000EAB68 /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		554D776D17D5F4AE000EAB68 /* OverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayViewController.m; sourceTree = "<group>"; };
 		554D776E17D5F4AE000EAB68 /* OverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayViewController.xib; sourceTree = "<group>"; };
 		554D777117D5F4CA000EAB68 /* mustache.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mustache.png; sourceTree = "<group>"; };
+		554D777317D61D5E000EAB68 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		554D777417D61D5E000EAB68 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,8 @@
 		554D773D17D5EEF6000EAB68 /* iMustache */ = {
 			isa = PBXGroup;
 			children = (
+				554D777317D61D5E000EAB68 /* Icon.png */,
+				554D777417D61D5E000EAB68 /* Icon@2x.png */,
 				554D777117D5F4CA000EAB68 /* mustache.png */,
 				554D774617D5EEF6000EAB68 /* AppDelegate.h */,
 				554D774717D5EEF6000EAB68 /* AppDelegate.m */,
@@ -239,7 +245,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				554D777517D61D5E000EAB68 /* Icon.png in Resources */,
 				554D775017D5EEF6000EAB68 /* Images.xcassets in Resources */,
+				554D777617D61D5E000EAB68 /* Icon@2x.png in Resources */,
 				554D774217D5EEF6000EAB68 /* InfoPlist.strings in Resources */,
 				554D774B17D5EEF6000EAB68 /* Main.storyboard in Resources */,
 				554D777017D5F4AE000EAB68 /* OverlayViewController.xib in Resources */,
