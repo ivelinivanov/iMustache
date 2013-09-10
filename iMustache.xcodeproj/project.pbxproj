@@ -21,8 +21,7 @@
 		554D775917D5EEF6000EAB68 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554D773B17D5EEF6000EAB68 /* UIKit.framework */; };
 		554D776117D5EEF6000EAB68 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 554D775F17D5EEF6000EAB68 /* InfoPlist.strings */; };
 		554D776317D5EEF6000EAB68 /* iMustacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 554D776217D5EEF6000EAB68 /* iMustacheTests.m */; };
-		554D776F17D5F4AE000EAB68 /* OverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554D776D17D5F4AE000EAB68 /* OverlayViewController.m */; };
-		554D777017D5F4AE000EAB68 /* OverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 554D776E17D5F4AE000EAB68 /* OverlayViewController.xib */; };
+		554D777017D5F4AE000EAB68 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 554D776E17D5F4AE000EAB68 /* OverlayView.xib */; };
 		554D777217D5F4CA000EAB68 /* mustache.png in Resources */ = {isa = PBXBuildFile; fileRef = 554D777117D5F4CA000EAB68 /* mustache.png */; };
 		554D777517D61D5E000EAB68 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 554D777317D61D5E000EAB68 /* Icon.png */; };
 		554D777617D61D5E000EAB68 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 554D777417D61D5E000EAB68 /* Icon@2x.png */; };
@@ -58,9 +57,7 @@
 		554D775E17D5EEF6000EAB68 /* iMustacheTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iMustacheTests-Info.plist"; sourceTree = "<group>"; };
 		554D776017D5EEF6000EAB68 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		554D776217D5EEF6000EAB68 /* iMustacheTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iMustacheTests.m; sourceTree = "<group>"; };
-		554D776C17D5F4AE000EAB68 /* OverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayViewController.h; sourceTree = "<group>"; };
-		554D776D17D5F4AE000EAB68 /* OverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayViewController.m; sourceTree = "<group>"; };
-		554D776E17D5F4AE000EAB68 /* OverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayViewController.xib; sourceTree = "<group>"; };
+		554D776E17D5F4AE000EAB68 /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 		554D777117D5F4CA000EAB68 /* mustache.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mustache.png; sourceTree = "<group>"; };
 		554D777317D61D5E000EAB68 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		554D777417D61D5E000EAB68 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
@@ -123,18 +120,11 @@
 		554D773D17D5EEF6000EAB68 /* iMustache */ = {
 			isa = PBXGroup;
 			children = (
-				554D777317D61D5E000EAB68 /* Icon.png */,
-				554D777417D61D5E000EAB68 /* Icon@2x.png */,
-				554D777117D5F4CA000EAB68 /* mustache.png */,
 				554D774617D5EEF6000EAB68 /* AppDelegate.h */,
 				554D774717D5EEF6000EAB68 /* AppDelegate.m */,
 				554D774917D5EEF6000EAB68 /* Main.storyboard */,
-				554D774C17D5EEF6000EAB68 /* CameraViewController.h */,
-				554D774D17D5EEF6000EAB68 /* CameraViewController.m */,
+				5592A0C417DF55F200A5C09B /* CameraViewController */,
 				554D773E17D5EEF6000EAB68 /* Supporting Files */,
-				554D776C17D5F4AE000EAB68 /* OverlayViewController.h */,
-				554D776D17D5F4AE000EAB68 /* OverlayViewController.m */,
-				554D776E17D5F4AE000EAB68 /* OverlayViewController.xib */,
 			);
 			path = iMustache;
 			sourceTree = "<group>";
@@ -142,6 +132,9 @@
 		554D773E17D5EEF6000EAB68 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				554D777317D61D5E000EAB68 /* Icon.png */,
+				554D777417D61D5E000EAB68 /* Icon@2x.png */,
+				554D777117D5F4CA000EAB68 /* mustache.png */,
 				554D774F17D5EEF6000EAB68 /* Images.xcassets */,
 				554D773F17D5EEF6000EAB68 /* iMustache-Info.plist */,
 				554D774017D5EEF6000EAB68 /* InfoPlist.strings */,
@@ -167,6 +160,16 @@
 				554D775F17D5EEF6000EAB68 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5592A0C417DF55F200A5C09B /* CameraViewController */ = {
+			isa = PBXGroup;
+			children = (
+				554D774C17D5EEF6000EAB68 /* CameraViewController.h */,
+				554D774D17D5EEF6000EAB68 /* CameraViewController.m */,
+				554D776E17D5F4AE000EAB68 /* OverlayView.xib */,
+			);
+			name = CameraViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +253,7 @@
 				554D777617D61D5E000EAB68 /* Icon@2x.png in Resources */,
 				554D774217D5EEF6000EAB68 /* InfoPlist.strings in Resources */,
 				554D774B17D5EEF6000EAB68 /* Main.storyboard in Resources */,
-				554D777017D5F4AE000EAB68 /* OverlayViewController.xib in Resources */,
+				554D777017D5F4AE000EAB68 /* OverlayView.xib in Resources */,
 				554D777217D5F4CA000EAB68 /* mustache.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,7 +276,6 @@
 				554D774E17D5EEF6000EAB68 /* CameraViewController.m in Sources */,
 				554D774817D5EEF6000EAB68 /* AppDelegate.m in Sources */,
 				554D774417D5EEF6000EAB68 /* main.m in Sources */,
-				554D776F17D5F4AE000EAB68 /* OverlayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +478,7 @@
 				554D776817D5EEF6000EAB68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		554D776917D5EEF6000EAB68 /* Build configuration list for PBXNativeTarget "iMustacheTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +487,7 @@
 				554D776B17D5EEF6000EAB68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

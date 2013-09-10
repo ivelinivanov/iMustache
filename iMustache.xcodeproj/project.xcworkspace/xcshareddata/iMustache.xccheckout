@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E8638F64-6298-4F9C-9DA7-631FA858D755</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iMustache</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>802F6234-3D62-4250-A776-262A7E4B3DCD</key>
+		<string>https://github.com/ivelinivanov/iMustache.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iMustache.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>802F6234-3D62-4250-A776-262A7E4B3DCD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ivelinivanov/iMustache.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>802F6234-3D62-4250-A776-262A7E4B3DCD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>802F6234-3D62-4250-A776-262A7E4B3DCD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iMustache</string>
+		</dict>
+	</array>
+</dict>
+</plist>

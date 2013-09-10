@@ -7,12 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "OverlayViewController.h"
 
 @interface CameraViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (strong, nonatomic) OverlayViewController *overlay;
 
 - (IBAction)takePicture:(id)sender;
 - (IBAction)sharePicture:(id)sender;

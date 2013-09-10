@@ -7,36 +7,40 @@
 //
 
 #import "CameraViewController.h"
-#import "OverlayViewController.h"
 
 @interface CameraViewController ()
+
+@property (strong, nonatomic) UIView *overlay;
 
 @end
 
 @implementation CameraViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-
 - (IBAction)takePicture:(id)sender
 {
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
-    picker.allowsEditing = NO;
-    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    picker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
-    picker.navigationBarHidden = YES;
-    picker.toolbarHidden = YES;
+    if( [UIImagePickerController isCameraDeviceAvailable: UIImagePickerControllerCameraDeviceFront ])
+    {
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        picker.allowsEditing = NO;
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        picker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+        picker.navigationBarHidden = YES;
+        picker.toolbarHidden = YES;
+        
+        NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"OverlayView" owner:self options:nil];
+        
+        self.overlay = [views firstObject];
+        picker.cameraOverlayView = self.overlay;
+        
+        [self presentViewController:picker animated:YES completion:NULL];
+    }
+    else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You don't have front camera!" message:@"Your device doesn't have front camera!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+        
+        [alert show];
+    }
     
-    self.overlay = [[OverlayViewController alloc] initWithNibName:@"OverlayViewController" bundle:nil];
-
-    picker.cameraOverlayView = self.overlay.view;
-    
-    [self presentViewController:picker animated:YES completion:NULL];
 }
 
 - (IBAction)sharePicture:(id)sender
@@ -84,7 +88,7 @@
     UIImage *chosenImage = info[UIImagePickerControllerOriginalImage];
     self.imageView.image = chosenImage;
     
-    [self.imageView addSubview:self.overlay.view];
+    [self.imageView addSubview:self.overlay];
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }
